@@ -14,32 +14,10 @@
 012 - c0 - 1000
 
 Address:  0 00000011 (0, short addr  7bit)
-Function: 0 10001011 (1-0-0, F0,F4,F3,F2,F1)
+Function: 0 10001011 (1-0-0, F0=off, F4=on, F3=off, F2=on, F1=on)
 Checksum: 0 10001000
 
-ZIMO Code used to generate it:
-Here is an example how you could use the library
-
-Here is an example how you could use the library
-
+The ZIMO DCC Code used to generate it:
 ```cpp
 packet{dcc::make_function_group_f4_f0_packet(3u, 0b10110u)};
 ```
-
-```cpp
-#include <dcc/dcc.hpp>
-
-void print_timings(char const* name, dcc::tx::Timings const& timings) {
-  printf("Bitstream of %s\n", name);
-  for (auto t : timings) printf("%d ", t >= DCC_TX_MIN_BIT_0_TIMING ? 0 : 1);
-  printf("\n");
-}
-
-int main() {
-  auto packet{dcc::make_function_group_f4_f0_packet(3u, 0b10110u)};
-  auto timings{dcc::tx::packet2timings(packet)};
-  print_timings("function group f4-0", timings);
-}
-```
-
-https://github.com/ZIMO-Elektronik/DCC
