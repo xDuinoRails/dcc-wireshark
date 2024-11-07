@@ -13,7 +13,7 @@
 011 - c0 - 1000
 012 - c0 - 1000
 
-Address:  0 00000011 (0, short addr  7bit)
+Address:  0 00000011 (0, short addr "3"  7bit)
 Function: 0 10001011 (1-0-0, F0=off, F4=on, F3=off, F2=on, F1=on)
 Checksum: 0 10001000
 
