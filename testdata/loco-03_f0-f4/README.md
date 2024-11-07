@@ -2,5 +2,5 @@
 
 - This testdata was generated using the [ZIMO-DCC](https://github.com/ZIMO-Elektronik/DCC) libraries, compiling the "main.cpp" file.
 
-<Adress Encoding>
-<Function Encoding>
+- tbd: Adress Encoding
+- tbd: Encoding
