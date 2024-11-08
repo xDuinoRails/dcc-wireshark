@@ -1,5 +1,9 @@
-# dcc-wireshark
-The informations needed to build a WireShark dissector for the DCC-protocol used in model railroads.
+# DCC-Wireshark - A DCC / Railcom dissector for WireShark
+This repository shall collect and define all information necessary to build a WireShark dissector for WireShark:
+
+1. Defining the ".pcap" import format
+2. Decoding the DCC & RailCom bitstreams (removing error correction, checksums, etc.)
+3. Resolving the bitstream to meaningful railroad semantics
 
 # Underlying specifications
 The specifications of the [DCC](https://en.wikipedia.org/wiki/Digital_Command_Control) protocol are maintained by the NMRA and extended by the RailCommunity:
