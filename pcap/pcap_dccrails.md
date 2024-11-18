@@ -21,7 +21,7 @@
 - 1 = DCC & Railcom
 - 2 = MM
 - 3 = MM2
-- 4 = mfx
+- 4 = MM & mfx
 
 ## Payload
 - Checkbits (0/1)
