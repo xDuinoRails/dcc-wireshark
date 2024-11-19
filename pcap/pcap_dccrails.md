@@ -15,7 +15,7 @@
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 ```
 
-? direction ?
+? direction ? timestamp ?
 
 ## Version
 - version = 0 (development)
