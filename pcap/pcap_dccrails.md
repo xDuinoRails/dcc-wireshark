@@ -17,7 +17,6 @@
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 ```
 
-? direction ? timestamp ?
 
 ## Version
 Field to allow future modifications to be tracked:
