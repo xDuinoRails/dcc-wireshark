@@ -6,7 +6,9 @@
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |    version    |  subprotocol  |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|    rail_id    |  detector_id  |
+|   central_id  |  central_rail |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+| detector_ver  |  detector_id  |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |    checkbit   |     data      |
 :       variable length         |
