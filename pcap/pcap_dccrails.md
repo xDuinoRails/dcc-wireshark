@@ -6,7 +6,7 @@
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |            version            |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-| subprotol up  | subprotocol dn|
+| subprotol bc  | subprotocol up|
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |   central_id  |  central_rail |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -20,14 +20,18 @@
 ? direction ? timestamp ?
 
 ## Version
+Field to allow future modifications to be tracked:
 - version = 0 (development)
 - version = 1 (stable)
 
-## Subprotocol
-- 1 = DCC & Railcom
+## Subprotocol broadcast
+- 1 = DCC
 - 2 = MM
 - 3 = MM2
-- 4 = MM & mfx
+
+## Subprotocol upstream
+- 1 = Railcom
+- 2 = mfx
 
 ## Payload
 - Checkbits (0/1)
