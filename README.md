@@ -18,3 +18,8 @@ The specifications of the [DCC](https://en.wikipedia.org/wiki/Digital_Command_Co
 
 # Dynamic testdata generation
 - TBD (with ZIMO-DCC library)
+
+# Appendix 1 - DCC-Format
+![alternative text](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/xDuinoRails/dcc-wireshark/refs/heads/main/dcc.puml)
+
+# Appendix 2 - Railcom-Format

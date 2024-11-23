@@ -1,0 +1,49 @@
+@startebnf
+
+DCC = BROADCAST,  { BROADCAST_COMMANDS }-
+    | (LOCO_ADDRESS, { LOCO_COMMANDS | GENERAL_COMMANDS }-
+    | ACCESSORY,  { ACCESSORY_COMMANDS | GENERAL_COMMANDS }- )
+    | AUTO_LOGON
+    | IDLE
+;
+
+LOCO_ADDRESS =      "0", L6_L0
+             |    "110", L13_L0
+             |  "11100", L11_L0
+;
+
+LOCO_COMMANDS = ( "01", DIRECTION, SPEED0_5 )
+              | ( "100", F0, F4_F1 )
+;
+
+ACCESSORY = "10", A7_A2, "1", A10_A8, ON_OFF, A1_A0, SUB_ADR
+          | "10", A7_A2, "0", A10_A8, "0", A1_A0, "0", D7_D0
+          | "10", A7_A2, "0", A10_A8, "1", A1_A0, ("0"|"1")
+;
+
+BROADCAST_COMMANDS =  MODEL_TIME | MODEL_DATE | MODEL_TIME_LAPSE
+                   | SYSTEM_TIME
+                   | CENTRAL_STATION_PROPERTIES
+;
+
+GENERAL_COMMANDS = CV_WRITE | CV_VERIFY
+;
+
+CV_WRITE = "111011" (* Write Byte (8-Bit) *), CV8_CV0, D7_D0
+         | "111010", CV8_CV0, "1111"  (* Write Single Bit *), DATA, BIT2_0 (* Bit position *)
+;
+
+CV_VERIFY = "111001" (* Verify Byte  (8-Bit) verify *), CV8_CV0, D7_D0
+          | "111010", CV8_CV0, "1110"  (* Verify Single Bit *), DATA, BIT2_0 (* Bit position *)
+;
+
+BROADCAST  = "00000000"
+;
+
+AUTO_LOGON = "11111110"
+;
+
+IDLE       = "11111111"
+;
+
+@endebnf
